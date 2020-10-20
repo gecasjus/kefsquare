@@ -1,0 +1,10 @@
+.f4 {
+	border: solid 1px;
+	border-color: rgb(0,0,0,0.5);
+}
+
+.button {
+	width: auto;
+	margin-top: 40px;
+	display:flex;
+}
