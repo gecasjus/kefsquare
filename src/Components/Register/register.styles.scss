@@ -1,0 +1,84 @@
+form {
+  width: 300px;
+  height: 300px;
+  float: left;
+  margin: 20px;
+  > div {
+  	position: relative;
+    overflow: hidden;
+  }
+  input, textarea {
+    width: 100%;
+    border: 2px solid gray; 
+    background: white;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    padding: 8px 12px;
+    outline: 0;
+    &:valid {
+      background: white; 
+    }
+    
+    &:focus {
+      border-color:rgb(75, 134, 180);
+    }
+    &:focus + label {
+      background: rgb(75, 134, 180);
+      color: black;
+      font-size: 70%;
+      padding: 1px 6px;
+      z-index: 2;
+    }
+  }
+  label {
+    transition:
+      background 0.2s,
+      color 0.2s,
+      top 0.2s,
+      bottom 0.2s,
+      right 0.2s,
+      left 0.2s;
+    position: absolute;
+    color: rgb(75, 134, 180);
+    padding: 7px 6px;
+  }
+  textarea {
+    display: block;
+    resize: vertical;
+  }
+}
+
+form.go-bottom {
+  input, textarea {
+    padding: 12px 12px 12px 12px; 
+  }
+  label {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+  input:focus, textarea:focus {
+    padding: 4px 6px 20px 6px; 
+  }
+  input:focus + label, textarea:focus + label {
+    top: 100%;
+    margin-top: -16px;
+  }
+}
+
+#button {
+border:none;
+background: rgb(75, 134, 180);
+border-radius: 10px;
+width:90px;
+height: 40px;
+outline:none;
+}
+
+.center {
+	display: flex;
+	justify-content: center;
+}

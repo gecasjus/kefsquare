@@ -1,5 +1,5 @@
 import React from 'react';
-import "./signin.styles.css";
+import "./signin.styles.scss";
 
 
 class SignIn extends React.Component {
@@ -20,7 +20,7 @@ class SignIn extends React.Component {
 
 	onSubmitSignIn = (event) => {
 		event.preventDefault();
-		fetch('http://localhost:3000/signin', {
+		fetch('https://calm-mountain-29448.herokuapp.com/signin', {
 			method: 'post',
 			headers: {'Content-Type': 'application/json'},
 			body: JSON.stringify({
@@ -39,44 +39,40 @@ class SignIn extends React.Component {
 
 	render() {
 		return (
-		<article className="mw6 center br3 pa3 pa4-ns mv3 ba b--black-10 shadow-5 center">
-			<main className="pa4 black-80">
-			  <form className="measure">
-			    <fieldset id="sign_up" 
-			    className="ba b--transparent ph0 mh0"
-			    >
-			      <legend className="f5 center">Sign In</legend>
+			<div className="center mw6 br3 pa3 pa4-ns mv3 ba b--black-10 shadow-5">
+			  <form className="go-bottom">
+			     <legend className="f5 center mb4">Sign In</legend>
 			      <div className="mt3">
-			        <label className="db fw6 lh-copy f6" for="email-address">Email</label>
 			        <input
-			        className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" 
+			        className="pa2 input-reset ba bg-transparent w-100" 
 			        type="email" 
 			        name="email-address"  
 			        id="email-address" 
 					onChange={this.onEmailChange}
 			        />
+			        <label for="email-address">Email</label>
 			      </div>
 			      <div className="mv3">
-			        <label className="db fw6 lh-copy f6" for="password">Password</label>
 			        <input 
-			        className="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" 
+			        className="pa2 input-reset ba bg-transparent w-100" 
 			        type="password" 
 			        name="password"  
 			        id="password" 
 			        onChange={this.onPasswordChange}
 			        />
+			        <label className="" for="password">Password</label>
 			      </div>
-			    </fieldset>
-			    <div className="">
-			      <input
+			    <div className="signin center">
+			      <button
+			      	id="button"
 			      	onClick={this.onSubmitSignIn} 
-			      	className="signin b ph3 pv2 input-reset grow pointer dib" 
+			      	className="signin ph2 pv2 mt3 grow pointer" 
 			      	type="submit" 
-			      	value="Sign in" />
+			      	value="Sign in"
+			      	>Sign In</button>
 			    </div>
 			  </form>
-			</main>
-		</article>	
+			</div>
 		);
 	}
 }

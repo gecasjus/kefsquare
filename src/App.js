@@ -7,11 +7,14 @@ import SignIn from './Components/SignIn/SignIn.js';
 import Register from './Components/Register/Register.js';
 import FaceRecognition from './Components/FaceRecognition/FaceRecognition.js';
 import Background from './Components/Background/Background.js';
+
 import AOS from 'aos';
 import "aos/dist/aos.css";
+import swal from 'sweetalert';
 
 const initialState = {
-      background:"lightgrey",
+      showFace: false,
+      background:"rgb(211, 211, 211)",
       input: '',
       imageUrl: '',
       boxes: [],
@@ -90,7 +93,7 @@ class App extends Component {
     let extension = format.some(array => this.state.input.includes(array));
     if (this.state.input.length !== 0 && extension) {
     this.setState({imageUrl: this.state.input});
-      fetch('http://localhost:3000/imageurl', {
+      fetch('https://calm-mountain-29448.herokuapp.com/imageurl', {
         method: 'post',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
@@ -100,7 +103,7 @@ class App extends Component {
       .then(response => response.json())
       .then(response => {
         if(response){
-          fetch('http://localhost:3000/image', {
+          fetch('https://calm-mountain-29448.herokuapp.com/image', {
             method: 'put',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
@@ -118,6 +121,8 @@ class App extends Component {
       .catch((err) => {
         console.log(err);
       });
+    } else {
+      swal("Ooops!", "Accepting (jpeg, png, jpg) formats");
     }
 }
 
@@ -130,6 +135,18 @@ class App extends Component {
     this.setState({route: route});
   }
 
+handleFace = () => {
+  this.setState({showFace: false});
+}
+
+  onClickChange = () => {
+    this.setState({showFace: true});
+  }
+
+  handleClick = (event) => {
+      this.onClickChange();
+      this.onButtonSubmit();
+  }
 
 
 render() {
@@ -149,40 +166,42 @@ render() {
                 Detect the presence and location of human faces. Upload the image url below
                 </p>
                 </div>
+                    </div>
               <div class="option-row">
-                      <input className="option-input" checked id="option-1" type="radio" name="options" />
+                    <input className="option-input" checked id="option-1" type="radio" name="options" onClick={this.handleFace} />
                       <label className="option" for="option-1">
                         <span className="option__label">
-                        <Rank 
+                        <Rank className="rank"
                             name={this.state.user.name} 
                             entries={this.state.user.entries}
                               />
-                          <ImageLinkForm id="linkform" className="option__label"
+                          <sub>
+                          <ImageLinkForm
                           onInputChange={this.onInputChange}
                           onButtonSubmit={this.onButtonSubmit}
                           />
+                          </sub>
                           <div className="button">
                             <button 
-                            id="btn"
-                              className='w-40 grow f4 link pv2 dib black center'
-                                  onClick={this.onButtonSubmit}
+                             id="btn"
+                              className='w-40 f4 link pv2 dib black center'
+                                  onClick={this.handleClick}
                                 >locate</button>
                                   </div>
                         </span>
                       </label>
-                      <input className="option-input" checked id="option-2" type="radio" name="options" />
+                      {this.state.showFace ? <input className="option-input" checked id="option-2" type="radio" name="options" /> : null}
                       <label className="option" for="option-2">
                         <span className="option__label">
                           <FaceRecognition
-                          className="option__label"
                           boxes={this.state.boxes}
                           imageUrl={this.state.imageUrl}
                           />
                         </span>
                       </label>
                       </div>
-                      </div>
                     </div>
+
         : 
         (
           this.state.route === 'SignIn' 

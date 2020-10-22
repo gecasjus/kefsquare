@@ -1,6 +1,5 @@
 import React from 'react';
 import './rank.styles.css';
-import icon from './icon.png'
 
 
 const Rank = ({name, entries}) => {
