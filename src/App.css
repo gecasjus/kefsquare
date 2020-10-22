@@ -158,8 +158,7 @@
    -webkit-transform-origin: top bottom;
     -webkit-transform: scale(0.7);
      -webkit-transition: inherit;
-      -webkit- transition-property: transform, opacity;
-
+      -webkit-transition-property: transform, opacity;
 }
 
   
