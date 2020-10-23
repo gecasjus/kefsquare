@@ -82,7 +82,7 @@
 
   @media (max-height: 626px) {
     .description {
-     top: 540px;
+     top: 640px;
      font-size:43px;
      width: 10vh;
      }
@@ -90,7 +90,7 @@
 
   @media (max-height: 540px) {
     .description {
-     top: 540px;
+     top: 640px;
      font-size:35px;
      width: 10vh;
      }
@@ -103,6 +103,16 @@
      width: 10vh;
      }
     }
+
+  @media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) {
+  .description { 
+      top: 500px;
+     font-size:33px;
+     width: 10vh;
+  }
+}
 
 
 
