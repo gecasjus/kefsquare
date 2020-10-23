@@ -46,6 +46,7 @@ img {
 @media (max-width: 410px) {
     .side {
      font-size:17px;
+     letter-spacing: 10px;
      }
     }
 

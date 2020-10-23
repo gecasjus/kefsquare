@@ -90,6 +90,14 @@
      }
     }
 
+  @media (max-height: 410px) {
+    .description {
+     top: 350px;
+     font-size:35px;
+     width: 10vh;
+     }
+    }
+
 
 .option-row {
   display: flex;
