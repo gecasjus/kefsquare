@@ -131,6 +131,7 @@
   -webkit-transition-property: flex-grow, opacity;
   transition-property: flex-grow, opacity;
   -webkit-transition-timing-function: cubic-bezier(.98,0,.22,.98), ease-in-out;
+  -moz-transition-timing-function: cubic-bezier(.98,0,.22,.98), ease-in-out;
   transition-timing-function: cubic-bezier(.98,0,.22,.98), ease-in-out;
   
 
@@ -141,7 +142,7 @@
     transform: scaleX(0.2);
     transition-property: transform, opacity;
     -webkit-transform: scaleX(0.2);
-    -webkit-transition-property: transform, opacity;
+    -webkit-transition-property: -webkit-transform, opacity;
   }
 }
     
@@ -158,13 +159,14 @@
    -webkit-transform-origin: top bottom;
     -webkit-transform: scale(0.7);
      -webkit-transition: inherit;
-      -webkit-transition-property: transform, opacity;
+      -webkit-transition-property: -webkit-transform, -webkit-opacity;
 }
 
   
 
 .option-input:checked + .option {
   flex-grow: 4;
+  -webkit-flex-grow: 4;
   opacity: 1;
 }
 

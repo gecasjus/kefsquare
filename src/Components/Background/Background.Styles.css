@@ -25,10 +25,11 @@ img {
 
 .side {
 	position: absolute;
+	bottom:5px;
+	left:0px;
   	align-self: flex-end;
 	text-orientation: upright;
     writing-mode: vertical-lr;
-	font-family: Gulim;
 	font-size: 20px;
 	letter-spacing: 20px;
 	color: #000000;
