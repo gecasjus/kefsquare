@@ -13,7 +13,7 @@
 .backgroundsquare {
   position: -webkit-sticky;
   position: sticky;
-  top: -1px;
+  top: 0px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -21,6 +21,7 @@
   height: 35vw;
   z-index: -1;
   transition: background 1.5s ease;
+  -webkit-transition: background 1.5s ease;
 }
 
 .description {
@@ -141,7 +142,7 @@
     transform-origin: 0 0;
     transform: scaleX(0.2);
     transition-property: transform, opacity;
-    -webkit-transform: scaleX(0.2);
+    -webkit-transform: -webkit-scaleX(0.2);
     -webkit-transition-property: -webkit-transform, opacity;
   }
 }
@@ -157,7 +158,7 @@
   transition: inherit;
   transition-property: transform, opacity;
    -webkit-transform-origin: top bottom;
-    -webkit-transform: scale(0.7);
+    -webkit-transform: -webkit-scale(0.7);
      -webkit-transition: inherit;
       -webkit-transition-property: -webkit-transform, -webkit-opacity;
 }
