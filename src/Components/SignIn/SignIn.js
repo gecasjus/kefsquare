@@ -66,7 +66,7 @@ class SignIn extends React.Component {
 			      <button
 			      	id="button"
 			      	onClick={this.onSubmitSignIn} 
-			      	className="signin ph2 pv2 mt3 grow pointer" 
+			      	className="signin ph2 pv2 mt3 black pointer" 
 			      	type="submit" 
 			      	value="Sign in"
 			      	>Sign In</button>
