@@ -131,7 +131,7 @@
   transition-duration: 0.8s, 0.6s;
   -webkit-transition-property: flex-grow, opacity;
   transition-property: flex-grow, opacity;
-  -webkit-transition-timing-function:-webkit-0.8s, cubic-bezier(.98,0,.22,.98), ease-in-out, 0.6s;
+  -webkit-transition:-webkit-0.9s, cubic-bezier(.98,0,.22,.98), ease-in-out, 0.6s;
   -moz-transition-timing-function:-moz-cubic-bezier(.98,0,.22,.98), ease-in-out;
   transition-timing-function: cubic-bezier(.98,0,.22,.98), ease-in-out;
   
