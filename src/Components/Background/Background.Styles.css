@@ -43,9 +43,9 @@ img {
 	color: #000000;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 410px) {
     .side {
-     font-size:16px;
+     font-size:17px;
      }
     }
 
@@ -103,6 +103,15 @@ img {
      }
     }
 
+@media (max-width: 410px) {
+    .squarex1 {
+     height:100px;
+     width: 100px;
+     top: 49px;
+     left:70px;
+     }
+    }
+
 @media (max-width: 870px) {
     .squarex2 {
     height: 130px;
@@ -126,6 +135,15 @@ img {
 	width: 140px;
 	top: 80px;
 	right: 60px;
+     }
+    }
+
+   @media (max-width: 410px) {
+    .squarex2 {
+     height:110px;
+     width: 110px;
+     top: 21px;
+     right: 47px;
      }
     }
 

@@ -52,7 +52,7 @@
 
 @media (max-width: 602px) {
     .description {
-     top: 550px;
+     top: 570px;
      font-size:43px;
      width: 10vh;
      }
@@ -84,7 +84,7 @@
 
   @media (max-height: 540px) {
     .description {
-     top: 560px;
+     top: 630px;
      font-size:35px;
      width: 10vh;
      }
