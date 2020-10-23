@@ -10,6 +10,12 @@
   height:140vh;
 }
 
+@media (max-width: 400px) {
+    .user {
+     height:100vh;
+     }
+    }
+
 .backgroundsquare {
   position: -webkit-sticky;
   position: sticky;
@@ -58,10 +64,10 @@
      }
     }
 
-@media (max-width: 410px) {
+@media (max-width: 400px) {
     .description {
-     top: 630px;
-     font-size:26px;
+     top: 430px;
+     font-size:35px;
      width: 10vh;
      }
     }
@@ -99,15 +105,6 @@
      }
     }
 
-  
-
-  @media (max-height: 400px) {
-    .description {
-     top: 300px;
-     font-size:35px;
-     width: 10vh;
-     }
-    }
 
 
 .option-row {
