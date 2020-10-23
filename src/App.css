@@ -64,7 +64,7 @@
      }
     }
 
-@media (max-width: 400px) {
+@media (max-width: 370px) {
     .description {
      top: 430px;
      font-size:35px;
@@ -82,7 +82,7 @@
 
   @media (max-height: 626px) {
     .description {
-     top: 630px;
+     top: 540px;
      font-size:43px;
      width: 10vh;
      }
@@ -90,7 +90,7 @@
 
   @media (max-height: 540px) {
     .description {
-     top: 510px;
+     top: 540px;
      font-size:35px;
      width: 10vh;
      }
