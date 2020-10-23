@@ -58,6 +58,14 @@
      }
     }
 
+@media (max-width: 410px) {
+    .description {
+     top: 630px;
+     font-size:26px;
+     width: 10vh;
+     }
+    }
+
 @media (max-height: 710px) {
     .description {
      top: 630px;
@@ -78,14 +86,6 @@
     .description {
      top: 560px;
      font-size:35px;
-     width: 10vh;
-     }
-    }
-
-    @media (max-height: 410px) {
-    .description {
-     top: 580px;
-     font-size:26px;
      width: 10vh;
      }
     }

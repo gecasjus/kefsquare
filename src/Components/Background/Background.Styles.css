@@ -33,7 +33,7 @@ img {
 
 .side {
 	position: absolute;
-	bottom:5px;
+	bottom:0px;
 	left:0px;
   	align-self: flex-end;
 	text-orientation: upright;
@@ -42,6 +42,14 @@ img {
 	letter-spacing: 20px;
 	color: #000000;
 }
+
+@media (max-width: 450px) {
+    .side {
+     font-size:16px;
+     }
+    }
+
+
 
 .horizontal {
 	position: absolute;
