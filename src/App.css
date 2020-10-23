@@ -90,9 +90,20 @@
      }
     }
 
-  @media (max-height: 410px) {
+
+    @media (max-height: 420px) {
     .description {
-     top: 350px;
+     top: 620px;
+     font-size:35px;
+     width: 10vh;
+     }
+    }
+
+  
+
+  @media (max-height: 400px) {
+    .description {
+     top: 300px;
      font-size:35px;
      width: 10vh;
      }

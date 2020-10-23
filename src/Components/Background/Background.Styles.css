@@ -43,7 +43,7 @@ img {
 	color: #000000;
 }
 
-@media (max-width: 410px) {
+@media (max-width: 400px) {
     .side {
      font-size:17px;
      letter-spacing: 10px;
