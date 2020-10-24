@@ -43,10 +43,6 @@ class App extends Component {
     }
   };
 
-  fc = () => {
-    console.log("beleka");
-  };
-
   componentDidMount() {
     window.addEventListener("scroll", this.listenScrollEvent);
     AOS.init({
