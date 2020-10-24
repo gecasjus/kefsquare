@@ -160,10 +160,11 @@
   -ms-transition-property: flex-grow, opacity;
   -webkit-transition-property: flex-grow, opacity;
   transition-property: flex-grow, opacity;
+  transition-timing-function: cubic-bezier(.98,0,.22,.98), ease-in-out;
   -webkit-transition:-webkit-0.9s, cubic-bezier(.98,0,.22,.98), ease-in-out, 0.6s;
   -moz-transition-timing-function:-moz-cubic-bezier(.98,0,.22,.98), ease-in-out;
   -ms-transition-timing-function:-moz-cubic-bezier(.98,0,.22,.98), ease-in-out;
-  transition-timing-function: cubic-bezier(.98,0,.22,.98), ease-in-out;
+  
   
 
   &:after {
