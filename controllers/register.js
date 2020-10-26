@@ -11,7 +11,7 @@ const handleRegister = (req, res, db, bcrypt) => {
 				email: email
 			})
 			.into('login')
-			.returning('email')  //knex method
+			.returning('email') 
 			.then(loginEmail => {
 				return trx('users')
 					.returning('*') 
