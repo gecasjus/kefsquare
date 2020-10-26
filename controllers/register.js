@@ -4,9 +4,9 @@ const handleRegister = (req, res, db, bcrypt) => {
 		return res.status(400).json('incorrect form submission')
 	}
 							
-	const hash = bcrypt.hashSync(password); //when you have to do two or more things at once you create a transaction
-		db.transaction(trx => {			//transactions if one part of the table(users) fail then the other also must fail(login). To avoid inconsistencies.
-			trx.insert({				//using trx parameter instead of db to make sure whatever we do is a transaction
+	const hash = bcrypt.hashSync(password);
+		db.transaction(trx => {			
+			trx.insert({				
 				hash: hash,
 				email: email
 			})
@@ -16,15 +16,15 @@ const handleRegister = (req, res, db, bcrypt) => {
 				return trx('users')
 					.returning('*') 
 					.insert({
-				email: loginEmail[0], //returning an array
+				email: loginEmail[0], 
 				name: name,
 				joined: new Date()
 			})
 			.then(user => {
-				res.json(user[0]); //to make sure that it is not an array and we are returning an object [0]
+				res.json(user[0]); 
 			})
 		})
-			.then(trx.commit)		//if all these pass, send this transaction through
+			.then(trx.commit)		
 			.catch(trx.rollback)
 	})
 	.catch(err => console.log(err))
