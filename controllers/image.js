@@ -16,11 +16,11 @@ app.models
 
 const handleImage = (req, res, db) => {
 	const { id } = req.body;
-	db('users').where('id', '=', id) //update the id that we received in the body
-  	.increment('entries', 1)   //increment entries by 1
+	db('users').where('id', '=', id) 
+  	.increment('entries', 1)  
   	.returning('entries')
   	.then(entries => {
-  		res.json(entries[0]); //to return a first array
+  		res.json(entries[0]); 
   	})
   	.catch(err => res.status(400).json('unable to get entries'))
   }
